@@ -30,13 +30,20 @@ public class Jurnal {
         if (x > 0) {
             int sum=0;
             for (int i = 0; i < x; i++) {
-                //System.out.print(last + " ");
+//                System.out.print(last + " ");
                 int temp = last;
                 last += first;
                 first = temp;
-                sum = last + temp;
+//                sum = last + temp;
             }
-            System.out.println(sum-1);
+//            System.out.println(sum-1);
+            
+            for (int i = 0; i < x; i++) {
+                int temp = first;
+                first = last - temp;
+                last = temp;
+                System.out.print(last + " ");
+            }
         }
     }
     
